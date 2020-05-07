@@ -1,5 +1,3 @@
-
-
 {{!-- banner  --}}
 <div class="banner">
   <img src="/assets/pic/resized.png" href="https://unsplash.com/photos/G3tRHpENRTs">
@@ -44,10 +42,12 @@
         <div class="card-body">
           <ul class="list-group">
             {{#each burgers}}
-            {{#readyNotServed is_ready is_served}}
+            {{#if is_ready}}
+            {{#unless is_served}}
             <li class="list-group-item list-group-item-action my-0">{{this.id}}.&nbsp;{{this.burger_name}}
-            <button class="btn btn-light float-right isServed" data-id="{{this.id}}">Served</button>
+              <button class="btn btn-light float-right isServed" data-id="{{this.id}}">Served</button>
             </li>
+            {{/unless}}
             {{/if}}
             {{/each}}
           </ul>

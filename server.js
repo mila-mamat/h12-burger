@@ -18,19 +18,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 
-//registered a new handlebar function
-const hbs = exphbs.create({});
-hbs.handlebars.registerHelper('readyNotServed', function(lvalue, rvalue) {
-    
-    if (arguments.length < 3)
-        throw new Error("Handlebars Helper equal needs 2 parameters");
-    if( lvalue && !rvalue ) {
-        return true;
-    } else {
-        return false;
-    }
-});
-
 // Handle all dynamic routes with our controller
 app.use(require('./controllers/burgers_controller'))
 
@@ -43,3 +30,17 @@ app.listen(PORT, () => {
   // Log (server-side) when our server has started
   console.log(`Server listening on: http://localhost:${PORT}`)
 })
+
+
+
+//registered a new handlebar function   // used nesting instead of registering helper
+// const hbs = exphbs.create({});
+// hbs.handlebars.registerHelper('readyNotServed', function(isReady, isServed,opts) {
+//     if (arguments.length < 3)
+//         throw new Error("Handlebars Helper equal needs 2 parameters");
+//     if( isReady && !isServed ) {
+//         return opts.fn(this);
+//     } else {
+//         return opts.inverse(this);
+//     }
+// });

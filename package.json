@@ -1,0 +1,24 @@
+{
+  "name": "h12-burger",
+  "version": "1.0.0",
+  "description": "a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mila-mamat/h12-burger.git"
+  },
+  "author": "mila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mila-mamat/h12-burger/issues"
+  },
+  "homepage": "https://github.com/mila-mamat/h12-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql2": "^2.1.0"
+  }
+}

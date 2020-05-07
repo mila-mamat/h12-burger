@@ -1,0 +1,59 @@
+
+
+{{!-- banner  --}}
+<div class="banner">
+  <img src="/assets/pic/resized.png" href="https://unsplash.com/photos/G3tRHpENRTs">
+  <h1 class='text-center'>Burger Order List </h1>
+</div>
+
+
+
+<form id="create-form" class="text-center m-5 w-50 mx-auto">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" id="burgername" name="name" placeholder="Burger Name:"
+      aria-label="burgerName" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="submit" id="button-addon2">New Order</button>
+    </div>
+  </div>
+</form>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <div class="card ml-md-5">
+        <h6 class="card-header bg-primary  text-white text-center">Burgers waiting in line!</h6>
+        <div class="card-body">
+
+
+          <ul class="list-group">
+            {{#each burgers}}
+            {{#unless is_ready}}
+            <li class="list-group-item list-group-item-action my-0 ">{{this.id}}.&nbsp;{{this.burger_name}}
+              <button class="btn btn-light float-right isReady" data-id="{{this.id}}">Ready</button>
+            </li>
+
+            {{/unless}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col mb-4">
+      <div class="card mr-md-5">
+        <h6 class="card-header bg-info text-white text-center">Burgers ready to serve!</h6>
+        <div class="card-body">
+          <ul class="list-group">
+            {{#each burgers}}
+            {{#readyNotServed is_ready is_served}}
+            <li class="list-group-item list-group-item-action my-0">{{this.id}}.&nbsp;{{this.burger_name}}
+            <button class="btn btn-light float-right isServed" data-id="{{this.id}}">Served</button>
+            </li>
+            {{/if}}
+            {{/each}}
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

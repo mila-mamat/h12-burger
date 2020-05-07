@@ -21,7 +21,7 @@ class DB {
     // if connection is created for the first time, assign it into conn to reuse after
     try {
       this.conn = mysql.createConnection(this.config).promise()  //wrap the createConnection with promise
-      console.log("connecting database ....................................................................")
+      console.log("connecting database ................................................")
       return this.conn
     } catch (err) {
       console.log(err)

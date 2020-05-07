@@ -10,6 +10,11 @@ const orm = {
     const [rows] = await connection.query(sql);
     return rows
   },
+  selectOne: async function (burgerId) {
+    const sql = 'SELECT * FROM burgers WHERE id = ? '
+    const [rows] = await connection.query(sql,[burgerId]);
+    return rows
+  },
 
   insertOne: async function (burgerName) {
     const sql = 'INSERT INTO burgers SET burger_name = ?'
@@ -20,7 +25,6 @@ const orm = {
   updateOne: async function (colName,burgerId) {
     const sql = `UPDATE burgers SET ?? = true WHERE id = ?`
     const [result] = await connection.query(sql, [colName,burgerId]);
-    console.log("orm:",result)
     return result
   }
 }

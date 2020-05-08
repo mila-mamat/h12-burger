@@ -27,7 +27,7 @@
 
 
 ## Project Description
-This is a simple version of web interface for burger orders managing system that helps burger stores track their daily orders by adding orders, mark orders that are prepared and served.
+This is a simple version of web interface for orders managing system that helps burger store kithcens track their daily orders by adding new one, marking as prepared or served.
 
 ```
 As a burger store owner
@@ -37,16 +37,11 @@ So THAT store's daily operations would went organized and effeciently
 
 
 ## Usage
+ Link to website: https://burger-order-list.herokuapp.com/
  
+ The web application enable burger stores to add new orders into the waiting list, move prepared burgers to the next table, and hide all burgers that are already served.
+<img src="https://github.com/mila-mamat/h12-burger/blob/master/gif/demo.gif" alt="Sample result" width="800" height="400">
 
-
-
-
-
-
-### others
-
-The application has taken user input formatting, validating, confirming identical employee names,and providing default value as a reference into considerations. 
 
 
 ## Installation
@@ -56,22 +51,29 @@ The application has taken user input formatting, validating, confirming identica
 
 ### Installing and running 
   1. Clone the repo 
-  2. (optional) Run seed.sql file to pre-populate your database
+  2. (optional) Run schema.sql, seed.sql file to pre-populate your database
   3. Install NPM packages through command-line
  ```
  npm install 
 ```  
-  3. Run the index.js in command-line
+#### To run the server and web appilication
+  1)  Run the server.js in command-line
  ```
- nodemon index.js
+ nodemon server.js
  ```
-
+ 
+ 2)  Open http://localhost:3000/ on browser.
+ 
+#### To run the test
+```
+ npm test.js
+ ```
  
 ## Badges
 ![node](https://img.shields.io/node/v/latest?style=plastic)
-![code size](https://img.shields.io/github/languages/code-size/mila-mamat/homework11-employee-tracker)
-![License](https://img.shields.io/github/license/mila-mamat/homework11-employee-tracker)
-![Language count](https://img.shields.io/github/languages/count/mila-mamat/homework11-employee-tracker)
+![code size](https://img.shields.io/github/languages/code-size/mila-mamat/h12-burger)
+![License](https://img.shields.io/github/license/mila-mamat/h12-burger)
+![Language count](https://img.shields.io/github/languages/count/mila-mamat/h12-burger)
 ## Contributing
  Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. 
  

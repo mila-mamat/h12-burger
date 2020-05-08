@@ -27,7 +27,7 @@
 
 
 ## Project Description
-This is a simple version of web interface for orders managing system that helps burger store kithcens track their daily orders by adding new one, marking as prepared or served.
+This is a simple version of web interface for order managing system that helps burger store kithcens to track their daily orders by adding new one, marking as prepared or served.
 
 ```
 As a burger store owner
